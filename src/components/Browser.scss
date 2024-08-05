@@ -1,0 +1,61 @@
+.browser-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5% 12.5%;
+  .item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin: 20px 0;
+    position: relative;
+  }
+  .inline {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    width: 70px;
+    margin-right: 15px;
+  }
+  h6 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 10px;
+    line-height: 1.6;
+    margin: 15px 0 75px;
+  }
+  a {
+    background: #0c7797;
+    color: white;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 23px;
+    right: 63px;
+  }
+}
+@media (max-width: 1425px) {
+  .browser-item {
+    margin: 5%;
+    .item {
+      padding: 20px;
+      width: 31.5%;
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .item {
+    width: 45%;
+  }
+}
+@media (max-width: 750px) {
+  .item {
+    width: 350px;
+    max-width: 100%;
+    margin: 15px auto;
+  }
+}
