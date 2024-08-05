@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Data4 } from "../components/images";
+import { Data4 } from "./Images";
 import "./Browser.scss";
+import { RiH1 } from "react-icons/ri";
 const Browser = () => {
   return (
     <div className="browser-item">

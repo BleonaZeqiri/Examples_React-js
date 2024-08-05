@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.scss";
 import { AiFillApple } from "react-icons/ai";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaBars, FaTimes } from "react-icons/fa";
 import ProductsMegemenu from "./ProductsMegemenu";
-import { BsTriangleFill } from "react-icons/bs";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="nav">
       <div className="title">
         <Link to="/">
           <AiFillApple />
+          Bleona
         </Link>
+        <div className="hamburger" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
       </div>
-      <div className="links">
+      <div className={`links ${menuOpen ? "active" : ""}`}>
         <div className="nav-link">
           <Link to="/" className="inner-link">
             Products <MdKeyboardArrowDown />
-            <BsTriangleFill className="arrow" />
             <ProductsMegemenu />
           </Link>
         </div>
@@ -37,12 +46,13 @@ const Nav = () => {
             About
           </Link>
         </div>
-      </div>
-      <div className="auth">
-        <Link to="/login">Log in</Link>
-        <Link to="/signup" className="sign-up">
-          Sign up
-        </Link>
+
+        <div className="auth">
+          <Link to="/">Log in</Link>
+          <Link to="/" className="sign-up">
+            Sign up
+          </Link>
+        </div>
       </div>
     </div>
   );

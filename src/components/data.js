@@ -1,7 +1,3 @@
-// import { FiFlag } from "react-icons/fi";
-
-// import React from "react";
-
 export const Data = [
   {
     title: "Item",

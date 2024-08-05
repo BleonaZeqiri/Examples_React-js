@@ -52,10 +52,16 @@
     width: 45%;
   }
 }
-@media (max-width: 750px) {
-  .item {
-    width: 350px;
-    max-width: 100%;
-    margin: 15px auto;
+
+@media (max-width: 1500px) {
+  .browser-item .item {
+    width: 47%;
+    margin: 22px 8px;
+  }
+}
+@media (max-width: 650px) {
+  .browser-item .item {
+    width: 100%;
+    margin: 22px 0;
   }
 }
